@@ -8,7 +8,7 @@ function makeGrid() {
         return;
     }
     // clear grid if needed
-    clearGrid();
+    clearContainer();
     // create grid
     const container = document.querySelector('.container');
     container.style['grid-template-columns'] = `repeat(${num_blocks}, ${CONTAINER_SIZE/num_blocks}px)`
@@ -23,10 +23,17 @@ function makeGrid() {
     }
 }
 
-function clearGrid() {
+function clearContainer() {
     const container = document.querySelector('.container');
     const blocks = document.querySelectorAll('.block');
     blocks.forEach(block => container.removeChild(block));
+}
+
+function clearGrid() {
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach(block => {
+        block.style['background-color'] = 'white';     
+    });
 }
 
 const reset = document.querySelector('#reset');
