@@ -16,3 +16,8 @@ function makeGrid() {
         container.appendChild(block);
     }
 }
+
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
+    location.reload();
+});
