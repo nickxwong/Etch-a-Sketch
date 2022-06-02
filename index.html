@@ -2,9 +2,28 @@
 <html>
     <head>
         <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
     <body>
+        <div class="game_options">
+            <form>
+                <select name="grid-size">
+                    <option value="default">Select a grid size</option>
+                    <option value=5>5x5</option>
+                    <option value=10>10x10</option>
+                    <option value=16>16x16</option>
+                    <option value="20">20x20</option>
+                    <option value=40>40x40</option>
+                    <option value=50>50x50</option>
+                    <option value=80>80x80</option>
+                    <option value=100>100x100</option>
+                </select>
+                <input type="submit" value="Submit"/>
+            </form>
+            <h1>Etch-A-Sketch</h1>
+            <button>Reset</button>
+        </div>
         <div class="container">
 
         </div>
