@@ -17,7 +17,9 @@ function makeGrid() {
         block.classList.add('block');
         block.style.border = '1px solid black';
         block.addEventListener('mouseenter', (event) => {
-            event.target.style['background-color'] = 'black';
+            // let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            // event.target.style['background-color'] = `#${randomColor}`;
+            event.target.style['background-color'] = "black";
         })
         container.appendChild(block);
     }
@@ -40,4 +42,3 @@ const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
     clearGrid();
 });
-
