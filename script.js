@@ -16,6 +16,9 @@ function makeGrid() {
         const block = document.createElement('div');
         block.classList.add('block');
         block.style.border = '1px solid black';
+        block.addEventListener('mouseenter', (event) => {
+            event.target.style['background-color'] = 'black';
+        })
         container.appendChild(block);
     }
 }
@@ -30,3 +33,4 @@ const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
     clearGrid();
 });
+
