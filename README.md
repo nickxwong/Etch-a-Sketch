@@ -2,11 +2,10 @@
 Etch-a-Sketch is a drawing application that has users create lines with their mouse.
 
 # Technologies & Languages
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, html2canvas
 
 # Planned features
-- Update UI to look similar to a real-life Etch-a-Sketch
-- Ability to change colors
-- Have each pass through intensify/darken color
-- Ability to download grid or copy to clipboard
-- Have a user-submitted gallery
+- The ability to select colors
+- A gradient rainbow mode
+- A randomized rainbow mode
+- A user-submitted gallery
