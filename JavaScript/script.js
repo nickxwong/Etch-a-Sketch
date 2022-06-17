@@ -56,4 +56,5 @@ function screenshot() {
             navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})]);
         });
     });
+    alert("Drawing copied to clipboard!");
 }
