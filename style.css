@@ -9,7 +9,7 @@ body {
 
 .sidebar,
 .game {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 99vh;
 }
 
@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     gap: 15px;
     padding: 25px;
+    margin-left: 30px;
 }
 
 .info {
@@ -42,19 +43,29 @@ body {
 }
 
 .game {
-    flex: 4;
+    flex: 2;
+    display: flex;
+    justify-content: center;
 }
 
-.container {
+.console {
+    margin-top: 30px;
+    height: 700px;
+    width: 1000px;
+    border-radius: 30px;
     border: 3px solid black;
-    background-color: white;
-    height: 600px;
-    width: 600px;
-    display: grid;
+    background-color: #eb1010;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
 }
 
-.new-ui {
-    height: 100vh;
+.middle {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
 }
 
 .knob {
@@ -63,25 +74,12 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 70px;
-    margin-bottom: 40px;
 }
 
-.board {
-    margin-top: 30px;
+.canvas {
     border: 3px solid black;
-    background-color: #eb1010;
-    height: 700px;
-    width: 1000px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex: 1;
-}
-
-.left,
-.right {
-    height: 100%;
-    display: flex;
-    align-items: end;
+    background-color: white;
+    height: 600px;
+    width: 600px;
+    display: grid;
 }

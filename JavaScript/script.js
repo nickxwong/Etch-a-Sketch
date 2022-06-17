@@ -1,4 +1,4 @@
-const CONTAINER_SIZE = 800;
+const CANVAS_SIZE = 600;
 
 function getTransparency(rgba) {
     const values = rgba.replace(/[^\d,.]/g, '').split(',');
@@ -13,10 +13,10 @@ function makeGrid() {
         return;
     }
     // clear grid if needed
-    clearContainer();
+    clearCanvas();
     // create grid
-    const container = document.querySelector('.container');
-    container.style['grid-template-columns'] = `repeat(${num_blocks}, ${CONTAINER_SIZE/num_blocks}px)`
+    const canvas = document.querySelector('.canvas');
+    canvas.style['grid-template-columns'] = `repeat(${num_blocks}, ${CANVAS_SIZE/num_blocks}px)`
     for (let i = 0; i < Math.pow(num_blocks, 2); i++) {
         const block = document.createElement('div');
         block.classList.add('block');
@@ -28,14 +28,14 @@ function makeGrid() {
                 event.target.style['background-color'] = `rgba(0, 0, 0, ${transparency + 0.2})`;    
             }
         })
-        container.appendChild(block);
+        canvas.appendChild(block);
     }
 }
 
-function clearContainer() {
-    const container = document.querySelector('.container');
+function clearCanvas() {
+    const canvas = document.querySelector('.canvas');
     const blocks = document.querySelectorAll('.block');
-    blocks.forEach(block => container.removeChild(block));
+    blocks.forEach(block => canvas.removeChild(block));
 }
 
 function clearGrid() {
@@ -51,7 +51,7 @@ reset.addEventListener('click', () => {
 });
 
 function screenshot() {
-    html2canvas(document.querySelector('.container')).then(function(canvas) {
+    html2canvas(document.querySelector('.canvas')).then(function(canvas) {
         canvas.toBlob(blob => {
             navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})]);
         });
