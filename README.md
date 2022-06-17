@@ -9,3 +9,4 @@ HTML, CSS, JavaScript
 - Ability to change colors
 - Have each pass through intensify/darken color
 - Ability to download grid or copy to clipboard
+- Have a user-submitted gallery
