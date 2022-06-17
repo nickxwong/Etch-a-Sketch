@@ -3,7 +3,6 @@
     <head>
         <title>Etch-A-Sketch</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="game_options">
@@ -24,5 +23,9 @@
             <h1>Etch-A-Sketch</h1>
             <button id="reset">Reset</button>
         </div>
+        <div class="container"></div>
+        <button onclick="screenshot()">Screenshot</button>
+        <script src="./JavaScript/html2canvas.min.js"></script>
+        <script src="./JavaScript/script.js"></script>
     </body>
 </html>
