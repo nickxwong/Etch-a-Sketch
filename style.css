@@ -9,7 +9,6 @@ body {
 
 .sidebar,
 .game {
-    /* border: 2px solid black; */
     height: 99vh;
 }
 
@@ -18,8 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 25px;
-    margin-left: 30px;
+    padding: 25px 50px 0px 50px;
 }
 
 .info {
@@ -45,11 +43,12 @@ body {
 .game {
     flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .console {
     margin-top: 30px;
+    margin-left: 10px;
     height: 700px;
     width: 1000px;
     border-radius: 30px;
@@ -61,7 +60,6 @@ body {
 }
 
 .middle {
-    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     justify-content: space-around;
