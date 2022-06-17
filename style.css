@@ -1,21 +1,87 @@
+* {
+    margin: 0;
+}
+
 body {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+}
+
+.sidebar,
+.game {
+    border: 2px solid black;
+    height: 99vh;
+}
+
+.sidebar {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0px;
+    gap: 15px;
+    padding: 25px;
 }
-.game_options {
+
+.info {
     display: flex;
-    align-items: center;
-    gap: 95px;
-    height: 28px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info h1 {
+    text-align: center;
+}
+
+.game_options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.planned_features ul {
+    margin-left: -20px;
+}
+
+.game {
+    flex: 4;
 }
 
 .container {
     border: 3px solid black;
-    height: 800px;
-    width: 800px;
+    background-color: white;
+    height: 600px;
+    width: 600px;
     display: grid;
+}
+
+.new-ui {
+    height: 100vh;
+}
+
+.knob {
+    border: 3px solid black;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 70px;
+    margin-bottom: 40px;
+}
+
+.board {
+    margin-top: 30px;
+    border: 3px solid black;
+    background-color: #eb1010;
+    height: 700px;
+    width: 1000px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.left,
+.right {
+    height: 100%;
+    display: flex;
+    align-items: end;
 }

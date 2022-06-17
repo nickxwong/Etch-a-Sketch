@@ -5,26 +5,66 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="game_options">
-            <form>
-                <select id="grid-size">
-                    <option value="default">Select a grid size</option>
-                    <option value=5>5x5</option>
-                    <option value=10>10x10</option>
-                    <option value=16>16x16</option>
-                    <option value=20>20x20</option>
-                    <option value=40>40x40</option>
-                    <option value=50>50x50</option>
-                    <option value=80>80x80</option>
-                    <option value=100>100x100</option>
-                </select>
-                <button type="button" onclick="makeGrid()">Submit</button>
-            </form>
-            <h1>Etch-A-Sketch</h1>
+        <div class="sidebar">
+            <div class="info">
+                <h1>Etch-a-Sketch</h1>
+                <p>Welcome to Etch-a-Sketch, where you can draw with just your mouse!
+                Please select a grid size below to generate a canvas. The more
+                squares you select, the more detail you can add to your drawing.</p>
+                <p>The screenshot button will copy your drawing to your clipboard
+                and the reset button will erase your canvas so you can start over.</p>    
+            </div>
+            <div class="game_options">
+                <form>
+                    <select id="grid-size">
+                        <option value="default">Select a grid size</option>
+                        <option value=5>5x5</option>
+                        <option value=10>10x10</option>
+                        <option value=16>16x16</option>
+                        <option value=20>20x20</option>
+                        <option value=40>40x40</option>
+                        <option value=50>50x50</option>
+                        <option value=80>80x80</option>
+                        <option value=100>100x100</option>
+                    </select>
+                    <button type="button" onclick="makeGrid()">Submit</button>
+                </form>
+                <div class="buttons">
+                    <button onclick="screenshot()">Screenshot</button>
+                    <button id="reset">Reset</button>   
+                </div>   
+            </div>
+            <div class="planned_features">
+                <h3>Planned features</h3>
+                <ul>
+                    <li>The ability to select colors</li>
+                    <li>A gradient rainbow mode</li>
+                    <li>A randomized rainbow mode</li>
+                    <li>A user-submitted gallery</li>
+                </ul>
+            </div>
+            <div class="attribution">
+                <h3>Attribution</h3>
+                <p>This website was created with the help of html2canvas</p>    
+            </div>  
+        </div>
+        <div class="game">
+            <!-- <div class="board">
+                <div class="left">
+                    <div class="knob"></div> 
+                </div>
+                <div class="container"></div>
+                <div class="right">
+                    <div class="knob"></div>
+                </div>
+            </div>     -->
+        </div>
+        
+        <!-- <div class="game_options">
+            
             <button onclick="screenshot()">Screenshot</button>
             <button id="reset">Reset</button>
-        </div>
-        <div class="container"></div>
+        </div> -->
         <script src="./JavaScript/html2canvas.min.js"></script>
         <script src="./JavaScript/script.js"></script>
     </body>
