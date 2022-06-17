@@ -1,5 +1,10 @@
 const CONTAINER_SIZE = 800;
 
+function getTransparency(rgba) {
+    const values = rgba.replace(/[^\d,.]/g, '').split(',');
+    return parseFloat(values[3]);
+}
+
 function makeGrid() {
     // get form submission
     const num_blocks = document.getElementById('grid-size').value;
@@ -16,10 +21,12 @@ function makeGrid() {
         const block = document.createElement('div');
         block.classList.add('block');
         block.style.border = '1px solid black';
+        block.style['background-color'] = 'rgba(0, 0, 0, 0)';
         block.addEventListener('mouseenter', (event) => {
-            // let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-            // event.target.style['background-color'] = `#${randomColor}`;
-            event.target.style['background-color'] = "black";
+            let transparency = getTransparency(event.target.style.backgroundColor);
+            if (transparency < 1) {
+                event.target.style['background-color'] = `rgba(0, 0, 0, ${transparency + 0.2})`;    
+            }
         })
         container.appendChild(block);
     }
@@ -34,7 +41,7 @@ function clearContainer() {
 function clearGrid() {
     const blocks = document.querySelectorAll('.block');
     blocks.forEach(block => {
-        block.style['background-color'] = 'white';     
+        block.style['background-color'] = 'rgba(0, 0, 0, 0)';     
     });
 }
 
