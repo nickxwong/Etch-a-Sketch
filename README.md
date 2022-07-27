@@ -1,7 +1,7 @@
 # Etch-a-Sketch
-Etch-a-Sketch is a drawing application that has users create lines with their mouse.
+Etch-a-Sketch is a web-based drawing application that has users create lines with their mouse.
 
-# Technologies & Languages
+# Languages & Technologies
 HTML, CSS, JavaScript, html2canvas
 
 # Planned features
